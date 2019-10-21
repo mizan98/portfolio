@@ -1,44 +1,19 @@
-html {
-    overflow: hidden;
-}
-
-body {
-    margin: 0px;
-    color: #ß000;
-    height: 100vh;
+.parallax {
     perspective: 1px;
-    transform-style: preserve-3d;
+    height: 100vh;
     overflow-x: hidden;
     overflow-y: auto;
-}
-
-.parallax-scrolling {
-    width: 100vw;
-    height: 100vh;
-    padding-top: 20vh;
-    box-sizing: border-box;
-    transform-style: preserve-3d;
-}
-
-.parallax-scrolling::before {
-    content: "";
-    width: 100vw;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    background-image: url("/Users/codenation/Desktop/portfolio/XO425Xa.jpg");
+  }
+  .parallax__layer {
     position: absolute;
-    z-index: -1;
-    transform: translateZ(-1px) scale(2);
-}
-
-.header {
-    margin: 0 auto;
-    width: 50px;
-    padding: 50%;
-    text-align: center;
-}
-
-h1 {
-    text-align: center;
-}
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  .parallax__layer--base {
+    transform: translateZ(0);
+  }
+  .parallax__layer--back {
+    transform: translateZ(-1px);
+  }
