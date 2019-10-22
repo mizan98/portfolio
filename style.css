@@ -3,7 +3,6 @@ html {
   overflow: hidden;
 }
 body {
-  color: black;
   margin:0;
   padding:0;
   perspective: 1px;
@@ -44,6 +43,7 @@ header ::before{
   transform-origin: center center;
   transform: translateZ(-1px) scale(2);
   min-height: 100vh;
+  z-index: -1;
 }
 
 header * {
@@ -54,15 +54,35 @@ header * {
   padding: 1em 0;
 }
 
-.regular-wrapper{
+#parallelogram {
   width: 100vw;
   height: 100vh;
-  padding: 20%;
+  transform: skew(20deg);
+  background: black;
+  margin-top: -10px;
+  margin-left: -500px;
+  box-sizing: border-box;
+  z-index: 3;
+  position: absolute;
 }
 
-.content{
-  background: black;
-  height: 100vh;
-  width: 100vw;
+.regular-wrapper{
+  bottom: 0;
+  content: "";
+  left: 0;
+  top: 0;
+  right: 0;
+  display: block;
+  background-image: url("Screenshot\ 2019-10-22\ at\ 11.52.28.png");
+  background-size: cover;
+  transform-origin: center center;
+  transform: translateZ(-1px) scale(2);
+  min-height: 100vh;
+  z-index: -1;
 
+.JavaScript h1{
+  margin: 0 auto;
+  padding: 50px;
+  width: 50%;
+  color: white
 }
