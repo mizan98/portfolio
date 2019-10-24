@@ -1,0 +1,75 @@
+html {
+  height: 100%;
+  overflow: hidden;
+}
+body {
+  margin:0;
+  padding:0;
+  perspective: 1px;
+  transform-style: preserve-3d;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  font-family: "luna";
+  color: white;
+}
+
+header{
+  box-sizing: border-box;
+  min-height: 100vh;
+  padding: 30vw 0 5vw;
+  position: relative;
+  transform-style: inherit;
+  width: 100vw;
+}
+
+header h1{
+  margin-top: -100px;
+}
+
+header, header:before{
+  background: 50% 50% / cover;
+}
+
+header ::before{
+  bottom: 0;
+  content: "";
+  left: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  background-image: url("macOS-Catalina-wallpaper-idownloadblog.jpg");
+  background-size: cover;
+  transform-origin: center center;
+  transform: translateZ(-1px) scale(2);
+  min-height: 100vh;
+  z-index: -1;
+}
+
+header * {
+  font-weight: normal;
+  letter-spacing: 0.2em;
+  text-align: center;
+  margin: 0;
+  padding: 1em 0;
+}
+
+.regular-wrapper {
+  width: 100vw;
+  height:100vh;
+  padding-top:20vh;
+  background-color: black;
+  z-index: 2;
+  position: relative;
+}
+
+.content {
+  margin: 0 auto;
+  padding: 50px;
+  width: 50%;
+  text-align: center;
+  letter-spacing: 0.2em;
+  font-weight: normal;
+  font-family: "luna";
+}
